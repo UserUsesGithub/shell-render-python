@@ -1,2 +1,4 @@
-# shell-render-python
-Simple shell renderer which works by showing the image and clearing the shell
+# Shell render
+## Using Python
+**Ways to use:**
+-Copy into your own code
