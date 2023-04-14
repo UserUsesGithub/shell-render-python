@@ -5,7 +5,7 @@ def render(text,*args):
     if platform == 'win32':
         os.system('cls')
     else:
-        os.sytem('clear')
+        os.system('clear')
     print(text)
     success = False
     try:
