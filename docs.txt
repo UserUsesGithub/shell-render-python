@@ -8,3 +8,10 @@ render()
   --The second argument is optional and it determines how long it will wait before cleaning the screen for example 0.1 second
   --The third argument is optional too and it allows you an input requierment so the user needs to input before they continue.It returns the value from the user.
   ----Example:"value = render("hello world",0,'prompt: ')
+modify():
+  --To modify your string use this function. It asks for four arguments which are string, new, x and y
+  --The string is asking for a string to modify
+  --New asks for what to modify it into
+  --X asks for where on 1 line to modify it
+  --Y asks for which line to modify
+  --After that it just returns the modified string as a value
