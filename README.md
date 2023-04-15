@@ -3,5 +3,5 @@
 **Ways to use:**
 -Copy into your own code.
 # About
-This engine is function based, beginner friendly and it is not meant to be used seriously yet<br>
-It is more of a test and little attempt at making someyhing nice
+This engine is function-based and beginner-friendly.
+It is more of a test and a little attempt at making something nice
