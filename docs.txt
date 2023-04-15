@@ -1,1 +1,9 @@
-Nothing yet
+___________________________________________________________________________________
+Shellderer
+basic python shell renderer which functions by clearing the screen and adding to it
+___________________________________________________________________________________
+render()
+ --To render just type as the first argument what to render
+ ----For example:"render("hello_world")"
+ --The second argument is optional and it determines how long it will wait before cleaning the screen for example 0.1 second
+ --
