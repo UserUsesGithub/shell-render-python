@@ -58,6 +58,24 @@ def all_y(text):
             yield i[0],i[1]
 
 
+def all_x(text):
+    #find all x values
+    final = []
+    all_val = []
+    text2 = text.split('\n')
+    for i in enumerate(text2):
+        if i[1] != '':
+            all_val.append(i[1])
+    size = len(all_val[0])
+    for i in range(size):
+        first = ''
+        for l in all_val:
+            first += l[i]
+        final.append(first)
+    for end in final:
+        yield end
+    
+
 def raw_modify(text,new,loc):
     text2 = list(text)
     if text2[loc] == '\n':
