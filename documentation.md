@@ -1,5 +1,5 @@
 # Shellderer
-**Very basic image/video renderer in a shell**
+**Very basic image/video renderer in a shell using Python**
 ### Introduction<br>
 -This renderer mostly uses x and y coordinates
 -render() shows an image quickly and erases it<br>
