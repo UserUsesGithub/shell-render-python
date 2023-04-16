@@ -6,8 +6,8 @@
 -modify() modifies a single value from a string with x and y<br>
 -modify_raw() does the same thing but without x and y<br>
 -tell() tells a value using x and y<br>
--all_y() loops through all y values in a string
--all_x() loops through all x values in a string
+-all_y() loops through all y values in a string<br>
+-all_x() loops through all x values in a string<br>
 ### render(text,*args)<br>
   -To render just type as the first argument what to render<br>
   -For example:"render("hello_world")"<br>
