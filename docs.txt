@@ -1,23 +1,36 @@
 ___________________________________________________________________________________
 Shellderer
-basic python shell renderer which functions by clearing the screen and adding to it
+basic Python shell renderer which functions by clearing the screen and adding to it
 ___________________________________________________________________________________
-render()
+render(text,*args)
   --To render just type as the first argument what to render
-  ----For example:"render("hello_world")"
+  --For example:"render("hello_world")"
   --The second argument is optional and it determines how long it will wait before cleaning the screen for example 0.1 second
-  --The third argument is optional too and it allows you an input requierment so the user needs to input before they continue.It returns the value from the user.
-  ----Example:"value = render("hello world",0,'prompt: ')
-modify():
+  --The third argument is optional too and it allows you an input requirement so the user needs to input before they continue. It returns the value from the user.
+  --Example: "value = render("hello world",0,' prompt: ')
+modify(text,new,x,y):
   --To modify your string use this function. It asks for four arguments which are string, new, x and y
   --The string is asking for a string to modify
   --New asks for what to modify it into
   --X asks for where on 1 line to modify it
   --Y asks for which line to modify
-  --After that it just returns the modified string as a value
-  --Example:"value = modify(previous_value,'hello world",0,0)
-raw_modify():
-  --Used to modify string in raw format following this syntax string,new,loc
-  --String is which string to use like in modify
-  --New is the same from modify
-  --Loc is used intead of x and y.It searches through a list directly
+  --After that, it just returns the modified string as a value
+  --Here is an example:"value = modify(previous_value,'hello world",0,0)
+raw_modify(text,new,loc):
+  --Used to modify the string in the raw format following this syntax string, new,loc
+  --String is which string to use which is the exact same as in modify
+  --New is the same as modify
+  --Loc is used instead of x and y. It searches through a list directly
+  --It can't pick newlines and will return an exception if you try to
+  --Here is an example: "value = raw_modify('abc123\na','b' , 6)" would return an exception because you are trying to pick a newline but value = raw_modify('abc123\na' , 'b' , 5) would not.
+tell(text,x,y):
+--This command is very similar to modify
+--It uses all the arguments modify uses just without new
+--Unlike modify this command returns the value you picked instead of the modified list
+--Here is an example:"value = tell('abc123',0,0)" This would pick "a" and value would equal "a"
+all_y(text):
+--This command is a generator which will loop through each y in text
+--Here is an example:"for i in all_y("something\nsomething"): print(i,end="")" This would return :"somethingsomething"
+all_x(text):
+--all_x is similar to all_y but it returns it in a reverse way
+--Note that it does return half full lines but replaces empty for spaces
