@@ -15,3 +15,9 @@ modify():
   --X asks for where on 1 line to modify it
   --Y asks for which line to modify
   --After that it just returns the modified string as a value
+  --Example:"value = modify(previous_value,'hello world",0,0)
+raw_modify():
+  --Used to modify string in raw format following this syntax string,new,loc
+  --String is which string to use like in modify
+  --New is the same from modify
+  --Loc is used intead of x and y.It searches through a list directly
