@@ -60,13 +60,23 @@ def all_y(text):
 
 def all_x(text):
     #find all x values
+    sizes = []
     final = []
     all_val = []
     text2 = text.split('\n')
     for i in enumerate(text2):
         if i[1] != '':
             all_val.append(i[1])
-    size = len(all_val[0])
+
+    for n in enumerate(all_val):
+        sizes.append(len(all_val[n[0]]))
+    size = max(sizes)
+    for m in range(size):
+        for i in enumerate(all_val):
+            if len(i[1]) != size:
+                all_val[i[0]] += ' '
+            
+
     for i in range(size):
         first = ''
         for l in all_val:
